@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beryl Al Fath — Author & Literary Writer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF5429',
+                            darkOrange: '#E03E15',
+                            dark: '#161616',
+                            cardDark: '#212121',
+                            cardBorder: '#2D2D2D',
+                            lightBg: '#F8F9FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Custom Arch Shape for Hero Image matching the Figma design */
+        .hero-arch {
+            border-radius: 999px 999px 0 0;
+        }
+        .badge-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-lightBg text-gray-800 antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- 1. Floating Capsule Navbar (Exact Figma Match) -->
+    <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
+        <nav class="bg-brand-dark/90 backdrop-blur-md text-white px-6 py-3 rounded-full flex items-center justify-between w-full max-w-4xl border border-white/10 shadow-2xl transition-all duration-300">
+            <!-- Left Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs font-medium tracking-wider text-gray-300">
+                <a href="#home" class="hover:text-brand-orange transition-colors">HOME</a>
+                <a href="#about" class="hover:text-brand-orange transition-colors">ABOUT ME</a>
+                <a href="#books" class="hover:text-brand-orange transition-colors">BOOKS</a>
+            </div>
+
+            <!-- Central Brand Logo -->
+            <a href="#home" class="flex items-center space-x-2 bg-brand-orange text-white px-4 py-1.5 rounded-full font-bold text-sm tracking-tight shadow-md">
+                <span>Beryl Al Fath</span>
+            </a>
+
+            <!-- Right Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs font-medium tracking-wider text-gray-300">
+                <a href="#experiences" class="hover:text-brand-orange transition-colors">EXPERIENCES</a>
+                <a href="#contact" class="hover:text-brand-orange transition-colors">CONTACT</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none p-1">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden absolute top-16 w-[90%] bg-brand-dark text-white rounded-2xl p-6 flex-col space-y-4 text-center border border-gray-800 shadow-2xl">
+            <a href="#home" class="mobile-link py-2 hover:text-brand-orange">HOME</a>
+            <a href="#about" class="mobile-link py-2 hover:text-brand-orange">ABOUT ME</a>
+            <a href="#books" class="mobile-link py-2 hover:text-brand-orange">BOOKS</a>
+            <a href="#experiences" class="mobile-link py-2 hover:text-brand-orange">EXPERIENCES</a>
+            <a href="#contact" class="mobile-link py-2 hover:text-brand-orange">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (Design Matched) -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto text-center">
+            
+            <!-- Big Main Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-8">
+                I'm <span class="text-brand-orange">Beryl Al Fath</span>,<br>
+                Novel Author & Writer
+            </h1>
+
+            <!-- Center Image with Arch Graphic & Badges -->
+            <div class="relative max-w-md mx-auto my-10">
+                <!-- Orange Arch Background Visual -->
+                <div class="w-64 h-64 sm:w-80 sm:h-80 bg-brand-orange hero-arch mx-auto absolute inset-x-0 bottom-0 z-0"></div>
+                
+                <!-- Main Author Illustration/Image -->
+                <div class="relative z-10 mx-auto w-64 sm:w-72 pt-6">
+                    <img src="foto.jpeg" 
+                         alt="Beryl Al-Fath" 
+                         class="rounded-b-full shadow-2xl object-cover h-80 sm:h-96 w-full mx-auto" 
+                         onerror="this.src='https://placehold.co/400x500/161616/FFFFFF?text=Beryl+Al-Fath'">
+                </div>
+
+                <!-- Floating Badge 1: Books Published (Left) -->
+                <div class="absolute top-16 -left-4 sm:-left-12 z-20 bg-white p-4 rounded-2xl badge-shadow text-left border border-gray-100 hidden sm:block max-w-[180px]">
+                    <div class="flex items-center space-x-2 text-yellow-500 text-xs mb-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="text-2xl font-extrabold text-gray-900">10+</div>
+                    <div class="text-xs text-gray-500 font-medium">Buku Works Published</div>
+                </div>
+
+                <!-- Floating Badge 2: Achievements (Right) -->
+                <div class="absolute bottom-10 -right-4 sm:-right-12 z-20 bg-white p-4 rounded-2xl badge-shadow text-left border border-gray-100 hidden sm:block">
+                    <div class="text-2xl font-extrabold text-brand-orange">6x</div>
+                    <div class="text-xs text-gray-500 font-medium">Penulis Terpilih Nasional</div>
+                </div>
+
+                <!-- Action Buttons Overlay -->
+                <div class="relative z-30 -mt-6 flex justify-center space-x-4">
+                    <a href="#books" class="bg-brand-orange hover:bg-brand-darkOrange text-white font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all flex items-center space-x-2 transform hover:-translate-y-1">
+                        <span>Buku Saya</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                    <a href="#contact" class="bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 font-semibold px-8 py-3.5 rounded-full shadow-md transition-all transform hover:-translate-y-1">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Me Section (Matching Figma "Why Hire Me / About") -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Visual Graphic -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm">
+                        <div class="w-full h-96 bg-brand-orange/10 rounded-3xl absolute top-4 left-4 -z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Writing Process" 
+                             class="rounded-3xl shadow-xl w-full h-96 object-cover"
+                             onerror="this.src='https://placehold.co/400x500/FF5429/FFFFFF?text=Beryl+Writing'">
+                        
+                        <!-- Floating Highlight Card -->
+                        <div class="absolute bottom-6 -right-6 bg-brand-dark text-white p-5 rounded-2xl shadow-xl max-w-[220px]">
+                            <div class="text-3xl font-extrabold text-brand-orange mb-1">UNESA</div>
+                            <div class="text-xs text-gray-300">Mahasiswa Pendidikan Sejarah</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-brand-orange font-semibold text-sm tracking-wider uppercase">
+                        <span>// About Me</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+                        Menuangkan Imajinasi & Menginspirasi Pembaca Lewat Karya Sastra
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Halo, nama saya <strong class="text-gray-900">Beryl Al-Fath</strong>, mahasiswa Universitas Negeri Surabaya sekaligus penulis yang memiliki ketertarikan mendalam pada dunia sastra dan kepenulisan. Hingga saat ini, saya telah berkontribusi dalam menghasilkan 10 karya buku & novel dengan berbagai tema dan cerita yang dikembangkan melalui kreativitas serta eksplorasi ide.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Bagi saya, menulis merupakan cara untuk menuangkan imajinasi, menyampaikan gagasan, dan menghadirkan cerita yang berkesan bagi pembaca. Saya terus berupaya mengembangkan kualitas kepenulisan serta terbuka terhadap peluang kolaborasi, pengembangan naskah, dan kerja sama dengan penerbit untuk menghasilkan karya yang berkualitas dan memiliki daya tarik tinggi.
+                    </p>
+
+                    <!-- Quick Stats Row -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4 border-t border-gray-100">
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900">10+</div>
+                            <div class="text-xs text-gray-500 mt-1">Buku Terbit</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900">6+</div>
+                            <div class="text-xs text-gray-500 mt-1">Penghargaan Nasional</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900">2025</div>
+                            <div class="text-xs text-gray-500 mt-1">Ketua Vikrama</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center space-x-2 text-brand-orange font-bold hover:text-brand-darkOrange transition-colors">
+                            <span>Mari Berkolaborasi</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Books Section (Matched Figma "My Services / Portfolio" Dark Card Style) -->
+    <section id="books" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-brand-orange text-sm font-bold tracking-widest uppercase mb-2">Katalog Karya</h2>
+                    <h3 class="text-3xl sm:text-5xl font-extrabold text-white">Buku & Karya Tulis</h3>
+                </div>
+                <p class="text-gray-400 max-w-md mt-4 md:mt-0 text-sm">
+                    Kumpulan 10 karya novel, non-fiksi, dan antologi cerpen yang telah diterbitkan dan mendapat apresiasi secara nasional.
+                </p>
+            </div>
+
+            <!-- Books Grid Layout (Replicating Figma Dark Cards) -->
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 01. Embun -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel</span>
+                        <span class="text-gray-500 font-mono text-xs">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Embun</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Sebuah karya novel sentimental yang mengeksplorasi arti ketulusan dan harapan di tengah keheningan.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.36.36.jpeg" alt="Cover Buku Embun - El-Fath Bey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 02. Ksatria Emas -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Epic</span>
+                        <span class="text-gray-500 font-mono text-xs">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Ksatria Emas</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Kisah petualangan epik keberanian dan perjuangan seorang ksatria mempertahankan kehormatan.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.37.37.jpeg" alt="Cover Buku Ksatria Emas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 03. Bulan Terbelah di Langit Kazakhstan -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Drama</span>
+                        <span class="text-gray-500 font-mono text-xs">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Bulan Terbelah di Langit Kazakhstan</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Perjalanan spiritual dan emosional yang melintasi benua dan batas keyakinan.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.57.14.jpeg" alt="Cover Buku Bulan Terbelah di Langit Kazakhstan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 04. Latervia Academy -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Fantasy</span>
+                        <span class="text-gray-500 font-mono text-xs">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Latervia Academy</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Kisah persahabatan, keajaiban, dan misteri di sebuah akademi penuh rahasia.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.43.27.jpeg" alt="Cover Buku Latervia Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 05. Knife 160 -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Thriller</span>
+                        <span class="text-gray-500 font-mono text-xs">05</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Knife 160</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Ketegangan dan intrik menegangkan yang menguji batas keberanian serta logika.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.44.12.jpeg" alt="Cover Buku Knife 160" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 06. Al Ukhuwah Al Islamiyah -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Non-Fiksi</span>
+                        <span class="text-gray-500 font-mono text-xs">06</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Al Ukhuwah Al Islamiyah</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Karya pemikiran non-fiksi mendalam mengenai persaudaraan Islam dan persatuan umat.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.42.20.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 07. Kala Hujan Menyeka Debu -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Kumpulan Cerpen</span>
+                        <span class="text-gray-500 font-mono text-xs">07</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Kala Hujan Menyeka Debu</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Antologi cerita pendek puitis tentang nostalgia, kehilangan, dan pemulihan jiwa.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.38.47.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 08. Dessert Brotherhood -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Action</span>
+                        <span class="text-gray-[#FF5429] font-mono text-xs">08</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Dessert Brotherhood</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Petualangan dan persaudaraan erat yang diuji di tengah medan perjuangan gurun yang tandus.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.40.44.jpeg" alt="Cover Buku Dessert Brotherhood" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 09. The Black Pearl Of Walichia -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Sejarah</span>
+                        <span class="text-gray-500 font-mono text-xs">09</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">The Black Pearl Of Walichia</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Kisah fiksi sejarah memukau tentang misteri dan harta karun berharga di tanah Walichia.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.47.38.jpeg" alt="Cover Buku The Black Pearl Of Walichia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- 10. Estaveta -->
+            <div class="bg-[#1e1e1e] border border-gray-800 rounded-3xl p-6 hover:border-[#FF5429]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-[#FF5429]/10 text-[#FF5429] text-xs font-medium rounded-full border border-[#FF5429]/20">Novel Inspiring</span>
+                        <span class="text-gray-500 font-mono text-xs">10</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#FF5429] transition-colors">Estaveta</h3>
+                    <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                        Perjuangan estafet generasi muda dalam memegang teguh cita-cita dan prinsip hidup.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
+                    <img src="WhatsApp Image 2026-11-03 at 10.39.31.jpeg" alt="Cover Buku Estaveta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 5. Experiences Timeline Section (Matching Figma Timeline Layout) -->
+    <section id="experiences" class="py-24 bg-brand-lightBg">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">// Track Record</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Pengalaman & Prestasi</h2>
+                <p class="text-gray-500 text-sm mt-2">Penghargaan kepenulisan nasional dan pengalaman keorganisasian.</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative border-l-2 border-brand-orange/30 ml-4 md:ml-32 space-y-10">
+
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-orange ring-4 ring-orange-100 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Penghargaan Kepenulisan</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Juara 3 Menulis Cerpen Tingkat Nasional</h3>
+                            <p class="text-gray-600 text-sm mt-1">Diselenggarakan oleh Binar Publisher</p>
+                        </div>
+                        <span class="inline-block mt-2 md:mt-0 text-xs font-semibold text-gray-400 bg-white px-3 py-1 rounded-full border border-gray-200">National Award</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Penerbitan Nasional</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Penulis Terpilih Tingkat Nasional</h3>
+                            <p class="text-gray-600 text-sm mt-1">Diakui & diterbitkan oleh Bara Pustaka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Komunitas Kepenulisan</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Penulis Terpilih Sobat Nulis</h3>
+                            <p class="text-gray-600 text-sm mt-1">Terpilih dalam kompetisi penulisan nasional oleh Sobat Nulis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Festival Sastra</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Penulis Terpilih Festival Penulis</h3>
+                            <p class="text-gray-600 text-sm mt-1">Dikurasi oleh Penerbit Festival Penulis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Penerbitan Publik</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Penulis Terpilih Ellunar Publisher</h3>
+                            <p class="text-gray-600 text-sm mt-1">Karya terpilih skala nasional oleh Penerbit Ellunar Publisher</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Event Cipta Karya</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Penulis Terpilih Event Cipta Karya Nasional</h3>
+                            <p class="text-gray-600 text-sm mt-1">Penghargaan cipta karya nasional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 & 8 (Organizational Roles) -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-orange ring-4 ring-orange-100 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Organisasi Kampus (2025)</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">Ketua Pelaksana Majalah Vikrama & Staff HMP</h3>
+                            <p class="text-gray-600 text-sm mt-1">Ketua Pelaksana Majalah Vikrama (2025) & Staff HMP Pendidikan Sejarah UNESA (2025)</p>
+                        </div>
+                        <span class="inline-block mt-2 md:mt-0 text-xs font-semibold text-white bg-brand-orange px-3 py-1 rounded-full">Leadership 2025</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 9 & 10 (Leadership Training) -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-dark ring-4 ring-gray-200 group-hover:scale-125 transition-transform"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Pelatihan Kepemimpinan</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-0.5">LKMM Pra-TD & LKMM TD (2025)</h3>
+                            <p class="text-gray-600 text-sm mt-1">LKMM Pra-TD Pendidikan Sejarah & LKMM TD Ilmu Administrasi Negara (2025)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact CTA Section (Matching Figma "Have An Awesome Project Idea?") -->
+    <section id="contact" class="py-20 bg-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <!-- Dark Interactive Contact Banner -->
+            <div class="bg-brand-dark rounded-3xl p-8 sm:p-14 text-center text-white relative shadow-2xl overflow-hidden">
+                <!-- Background Decorative Circles -->
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-brand-orange/20 rounded-full blur-2xl"></div>
+                <div class="absolute -left-10 -top-10 w-48 h-48 bg-brand-orange/20 rounded-full blur-2xl"></div>
+
+                <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">
+                    Have An Awesome Project Idea?<br>
+                    <span class="text-brand-orange">Let's Discuss & Collaborate</span>
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base mb-10">
+                    Terbuka untuk kerja sama penerbitan, pengembangan naskah, kolaborasi penulisan, atau sekadar berdiskusi tentang dunia sastra.
+                </p>
+
+                <!-- Quick Contact Form Style Pill -->
+                <div class="max-w-md mx-auto bg-gray-900/80 border border-gray-700 p-2 rounded-full flex items-center mb-10 shadow-inner">
+                    <input type="text" readonly value="elfathbey@gmail.com" class="bg-transparent text-gray-300 text-xs sm:text-sm px-4 focus:outline-none flex-grow">
+                    <a href="mailto:elfathbey@gmail.com" class="bg-brand-orange hover:bg-brand-darkOrange text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors">
+                        Kirim Email
+                    </a>
+                </div>
+
+                <!-- Contact Channels Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center border-t border-gray-800 pt-8">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/6289526648458" target="_blank" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-brands fa-whatsapp text-xl mb-1 text-emerald-400 group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">WhatsApp</div>
+                    </a>
+
+                    <!-- Instagram Main -->
+                    <a href="https://instagram.com/berylalfath" target="_blank" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-brands fa-instagram text-xl mb-1 text-pink-400 group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">@berylalfath</div>
+                    </a>
+
+                    <!-- Instagram Press -->
+                    <a href="https://instagram.com/elfathbeypress" target="_blank" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-solid fa-newspaper text-xl mb-1 text-brand-orange group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">@elfathbeypress</div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:elfathbey@gmail.com" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-regular fa-envelope text-xl mb-1 text-blue-400 group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">Email</div>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" target="_blank" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-brands fa-facebook text-xl mb-1 text-blue-500 group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">El Fath Bey</div>
+                    </a>
+
+                    <!-- Wattpad -->
+                    <a href="https://wattpad.com/user/Mberyl03" target="_blank" class="p-3 bg-gray-800/60 rounded-2xl hover:bg-brand-orange transition-colors group">
+                        <i class="fa-solid fa-book-open text-xl mb-1 text-orange-400 group-hover:text-white"></i>
+                        <div class="text-[11px] text-gray-400 group-hover:text-white font-medium">@Mberyl03</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer Banner Marquee & Copyright -->
+    <footer class="bg-brand-dark text-white pt-8 pb-12 border-t border-gray-800">
+        <!-- Marquee Category Strip -->
+        <div class="bg-brand-orange py-3 mb-10 overflow-hidden transform -rotate-1">
+            <div class="whitespace-nowrap flex space-x-8 text-xs sm:text-sm font-extrabold uppercase tracking-widest">
+                <span>✦ Novel</span>
+                <span>✦ Non-Fiksi</span>
+                <span>✦ Antologi Cerpen</span>
+                <span>✦ Sastra Indonesia</span>
+                <span>✦ Author & Writer</span>
+                <span>✦ Universitas Negeri Surabaya</span>
+                <span>✦ Novel</span>
+                <span>✦ Non-Fiksi</span>
+                <span>✦ Antologi Cerpen</span>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400">
+            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                <span class="bg-brand-orange text-white px-2 py-0.5 rounded font-bold">B</span>
+                <span class="text-white font-semibold">Beryl Al-Fath</span>
+                <span>© 2026 All Rights Reserved.</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#home" class="hover:text-brand-orange transition-colors">Kembali ke Atas ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Mobile Menu -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
+</body>
+
+</html>
